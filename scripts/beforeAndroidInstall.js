@@ -16,13 +16,13 @@ module.exports = function(context) {
    // set android:name attrib on <application> tag to point to the class that initializes Parse.Push for cold start.
    // Note: preserve user customization and write android:name IFF the attribute doesn't exist.
    //
-   var applicationNode = androidManifest.data.find('application');
+   /*var applicationNode = androidManifest.data.find('application');
    if(applicationNode.get('android:name') === undefined){
       applicationNode.set('android:name', DefaultApplicationName);
       androidManifest.save();
    } else{
       console.warn("It looks like your application's android:name has already been set. If you have not set it up for Parse.Push, please refer to the Advanced Configuration section of this plugin's README.");
    }
-
+*/
    return true;
 }
